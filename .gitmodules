@@ -1,0 +1,21 @@
+[submodule "document-scanner"]
+	path = document-scanner
+	url = https://github.com/document-scanner/document-scanner
+[submodule "document-scanner-it"]
+	path = document-scanner-it
+	url = https://github.com/document-scanner/document-scanner-it
+[submodule "document-scanner-ifaces"]
+	path = document-scanner-ifaces
+	url = https://github.com/document-scanner/document-scanner-ifaces
+[submodule "document-scanner-flexdock"]
+	path = document-scanner-flexdock
+	url = https://github.com/document-scanner/document-scanner-flexdock
+[submodule "document-scanner-docking-frames"]
+	path = document-scanner-docking-frames
+	url = https://github.com/document-scanner/document-scanner-docking-frames
+[submodule "document-scanner-demo"]
+	path = document-scanner-demo
+	url = https://github.com/document-scanner/document-scanner-demo
+[submodule "document-scanner-valuedetection-sutime"]
+	path = document-scanner-valuedetection-sutime
+	url = https://github.com/document-scanner/document-scanner-valuedetection-sutime
