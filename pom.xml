@@ -27,6 +27,28 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <richtercloud.document.scanner.hibernate.version>5.0.11.Final</richtercloud.document.scanner.hibernate.version>
     </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>richtercloud</groupId>
+                <artifactId>document-scanner-ifaces</artifactId>
+                <version>1.0-beta3</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>richtercloud</groupId>
+                <artifactId>document-scanner</artifactId>
+                <version>1.0-beta3</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>richtercloud</groupId>
+                <artifactId>document-scanner-flexdock</artifactId>
+                <version>1.0-beta3</version>
+                <type>jar</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <build>
         <pluginManagement>
             <plugins>
