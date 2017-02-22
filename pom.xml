@@ -8,7 +8,7 @@
         <relativePath></relativePath>
     </parent>
     <artifactId>document-scanner-parent</artifactId>
-    <version>1.0-beta3</version>
+    <version>1.0-beta4</version>
     <packaging>pom</packaging>
     <modules>
         <module>document-scanner-ifaces</module>
@@ -32,19 +32,19 @@
             <dependency>
                 <groupId>richtercloud</groupId>
                 <artifactId>document-scanner-ifaces</artifactId>
-                <version>1.0-beta3</version>
+                <version>1.0-beta4</version>
                 <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>richtercloud</groupId>
                 <artifactId>document-scanner</artifactId>
-                <version>1.0-beta3</version>
+                <version>1.0-beta4</version>
                 <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>richtercloud</groupId>
                 <artifactId>document-scanner-flexdock</artifactId>
-                <version>1.0-beta3</version>
+                <version>1.0-beta4</version>
                 <type>jar</type>
             </dependency>
         </dependencies>
