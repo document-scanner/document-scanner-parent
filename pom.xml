@@ -80,6 +80,34 @@
                     <configLocation>check_style.xml</configLocation>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.8</version>
+                <executions>
+                    <execution>
+                        <id>pmd-check</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <printFailingErrors>true</printFailingErrors>
+                    <rulesets>
+                        <ruleset>/ruleset.xml</ruleset>
+                    </rulesets>
+                    <excludeFromFailureFile>document-scanner-pmd-excludes/exclude-pmd.properties</excludeFromFailureFile>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>richtercloud</groupId>
+                        <artifactId>code-analysis</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
         </plugins>
     </build>
 </project>
