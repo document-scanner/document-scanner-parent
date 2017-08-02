@@ -19,9 +19,6 @@
 [submodule "document-scanner-valuedetection-sutime"]
 	path = document-scanner-valuedetection-sutime
 	url = https://github.com/document-scanner/document-scanner-valuedetection-sutime
-[submodule "code-analysis"]
-	path = code-analysis
-	url = https://github.com/krichter722/code-analysis.git
 [submodule "document-scanner-pmd-excludes"]
 	path = document-scanner-pmd-excludes
 	url = https://github.com/document-scanner/document-scanner-pmd-excludes
