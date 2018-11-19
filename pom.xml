@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>richtercloud</groupId>
+        <groupId>de.richtercloud</groupId>
         <artifactId>maven-parent</artifactId>
-        <version>1</version>
+        <version>10</version>
         <relativePath></relativePath>
     </parent>
     <artifactId>document-scanner-parent</artifactId>
@@ -30,89 +30,25 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>richtercloud</groupId>
+                <groupId>de.richtercloud</groupId>
                 <artifactId>document-scanner-ifaces</artifactId>
                 <version>1.0-beta4</version>
                 <type>jar</type>
             </dependency>
             <dependency>
-                <groupId>richtercloud</groupId>
+                <groupId>de.richtercloud</groupId>
                 <artifactId>document-scanner</artifactId>
                 <version>1.0-beta4</version>
                 <type>jar</type>
             </dependency>
             <dependency>
-                <groupId>richtercloud</groupId>
+                <groupId>de.richtercloud</groupId>
                 <artifactId>document-scanner-flexdock</artifactId>
                 <version>1.0-beta4</version>
                 <type>jar</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.19.1</version>
-                    <configuration>
-                        <trimStackTrace>false</trimStackTrace>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
-                <executions>
-                    <execution>
-                        <id>check_style</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <phase>validate</phase>
-                        <configuration>
-                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-                <configuration>
-                    <configLocation>check_style.xml</configLocation>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.8</version>
-                <executions>
-                    <execution>
-                        <id>pmd-check</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <printFailingErrors>true</printFailingErrors>
-                    <rulesets>
-                        <ruleset>/ruleset.xml</ruleset>
-                    </rulesets>
-                    <excludeFromFailureFile>document-scanner-pmd-excludes/exclude-pmd.properties</excludeFromFailureFile>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>richtercloud</groupId>
-                        <artifactId>code-analysis</artifactId>
-                        <version>1.0-SNAPSHOT</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
     <profiles>
         <profile>
             <id>travis</id>
@@ -160,4 +96,13 @@
             </build>
         </profile>
     </profiles>
+    <repositories>
+        <repository>
+            <id>sonatype-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
