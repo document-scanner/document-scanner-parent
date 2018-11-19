@@ -1,0 +1,8 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+main:
+  image: krichter/document-scanner-build:latest
+  script:
+    - sudo -u document-scanner -H -E bash -c 'env _JAVA_OPTIONS=-Djdk.net.URLClassPath.disableClassPathURLCheck=true mvn --batch-mode --update-snapshots install'
+      # need to be not root in order to be able to execute PostgreSQL's initdb
